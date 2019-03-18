@@ -1,5 +1,6 @@
-# Proyecto_Practica2019
+﻿# Proyecto_Practica2019
 
 Participantes:
 
-Felipe Barragán Núñez
+Felipe Barragán
+Sergio
