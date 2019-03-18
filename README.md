@@ -2,6 +2,6 @@
 
 Participantes:
 
-Felipe Barragán
+Felipe Barragán Nuñez
 Sergio
 Camilo Andrés Piza 
