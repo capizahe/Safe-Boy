@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BotonPreguntados : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Button Preg;
+
+     void Start()
     {
-        
+        Button p = Preg.GetComponent<Button>();
+        p.onClick.AddListener(click);
     }
 
-    // Update is called once per frame
-    void Update()
+    void click()
     {
-        
+        SceneManager.LoadScene("Preguntados");
     }
 }
