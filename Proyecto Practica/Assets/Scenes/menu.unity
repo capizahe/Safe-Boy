@@ -240,10 +240,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 423459221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07ee805fc3efdd24b851878e630df638, type: 3}
+  m_Script: {fileID: 11500000, guid: 8954221bd58962a43a00e0c25275fe6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Preg: {fileID: 423459223}
 --- !u!1 &560571139
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,12 +771,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 102900000, guid: 233afba0d72029e498c43a1994883aca, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 1133776570}
+        m_MethodName: on_Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -831,10 +830,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1133776565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9675ab9ef43ea4d4bb8350a95e8759f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d4edd295ca117c45b7529b63d13b855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avent: {fileID: 1133776567}
+  NombreEscena: MapaPrincipal
 --- !u!1 &1219205434
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,7 +847,7 @@ GameObject:
   - component: {fileID: 1219205436}
   - component: {fileID: 1219205435}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Botones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1306,7 +1305,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1832107802}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1832107804}
+        m_MethodName: on_Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1832107802
@@ -1355,10 +1365,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1832107799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05898f839bafc954684b0ea77c280087, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d4edd295ca117c45b7529b63d13b855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tut: {fileID: 1832107801}
+  NombreEscena: Tutorial
 --- !u!1 &1837659863
 GameObject:
   m_ObjectHideFlags: 0
