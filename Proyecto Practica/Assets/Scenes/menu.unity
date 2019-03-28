@@ -192,12 +192,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 423459221}
-        m_MethodName: 
+      - m_Target: {fileID: 423459226}
+        m_MethodName: on_Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4edd295ca117c45b7529b63d13b855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NombreEscena: E1
+  NombreEscena: Preguntados
 --- !u!1 &560571139
 GameObject:
   m_ObjectHideFlags: 0
