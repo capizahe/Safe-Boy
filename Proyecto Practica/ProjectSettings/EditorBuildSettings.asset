@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/menu.unity
+    guid: 2e48f9ca528035147b7b7f6dac60fc99
+  - enabled: 1
+    path: Assets/Scenes/Tutorial 1/E1.unity
+    guid: 02dd7643866854949825a458efdc1a7b
+  - enabled: 1
+    path: Assets/Scenes/Aventura.unity
+    guid: 233afba0d72029e498c43a1994883aca
+  - enabled: 1
+    path: Assets/Scenes/MapaPrincipal.unity
+    guid: f1d3a42499fef8f4b9cd38dc16289fe9
+  - enabled: 1
+    path: Assets/Scenes/menuSettings.unity
+    guid: 887765f4a8697a5428dd4be8231b7bc6
+  - enabled: 1
+    path: Assets/Scenes/Preguntados.unity
+    guid: a57d7d5361471444fa4d423adb55fff4
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 63b9b47b45944e149b4b9b31e18d2544
   m_configObjects: {}
