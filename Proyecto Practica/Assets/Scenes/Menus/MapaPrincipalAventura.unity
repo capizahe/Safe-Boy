@@ -205,7 +205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59275812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.04, y: 4.5, z: -3.5608191}
+  m_LocalPosition: {x: -4.96, y: 3.48, z: -3.5608191}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 214232425}
   - component: {fileID: 214232428}
   m_Layer: 5
-  m_Name: start
+  m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -776,9 +776,8 @@ GameObject:
   - component: {fileID: 625119140}
   - component: {fileID: 625119139}
   - component: {fileID: 625119142}
-  - component: {fileID: 625119143}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -906,20 +905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4edd295ca117c45b7529b63d13b855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NombreEscena: menu
---- !u!114 &625119143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 625119137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d4edd295ca117c45b7529b63d13b855, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NombreEscena: 
+  NombreEscena: Menu
 --- !u!1 &848969838
 GameObject:
   m_ObjectHideFlags: 0
