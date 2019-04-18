@@ -47,12 +47,12 @@ public class movimientoJugador : MonoBehaviour
 
     void moveRight()
     {
-        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(1000f * Time.deltaTime, 0));
+        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(800f * Time.deltaTime, 0));
 
     }
     void moveLeft()
     {
-        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-1000f * Time.deltaTime, 0));
+        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-800f * Time.deltaTime, 0));
 
     }
     void moveUp()

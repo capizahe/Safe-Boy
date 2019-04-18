@@ -35,7 +35,7 @@ public class FueraDeLugar : MonoBehaviour
      */
     void restartPosition()
     {
-        player.transform.position = new Vector3(-6.98f, -3f, -3.469688f);
+        player.transform.position = new Vector3(4.82f, -2.57f, -3.469688f);
         this.isIn = true;
     }
 }
