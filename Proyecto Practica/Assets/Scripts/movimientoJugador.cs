@@ -20,6 +20,7 @@ public class movimientoJugador : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             anim.SetBool("isMoving", true);
+            gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0.3481652f, -0.37f);
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
 
             moveRight();
@@ -27,6 +28,7 @@ public class movimientoJugador : MonoBehaviour
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             anim.SetBool("isMoving", true);
+            gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(-0.3693712f, -0.37f);
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
             moveLeft();
         }
