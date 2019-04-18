@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+/*
+ * 
+ * Esta clase se encarga de verificar si un objeto hace contacto y se puede acceder 
+ * a ellos mediante tags
+ * 
+ */
+ 
 public class InteracionObjetos : MonoBehaviour
 {
 
     public Text texto;
     public GameObject player;
+
 
     void Start()
     {
