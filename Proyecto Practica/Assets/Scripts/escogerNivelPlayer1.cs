@@ -6,17 +6,17 @@ using UnityEngine.SceneManagement;
 public class escogerNivelPlayer1 : MonoBehaviour
 {
 
-    private Vector3 posLevel1 = new Vector3(-6.04f, 4.5f, -3.56081f);
-    private Vector3 posLevel2 = new Vector3(-4.98f,3.9f, -3.6f);
-    private Vector3 posLevel3 = new Vector3(-3.75f,2.28f,-3.6f);
+    public Vector3 posLevel1 = new Vector3(-6.04f, 4.5f, -3.56081f);
+    public Vector3 posLevel2 = new Vector3(-4.98f,3.9f, -3.6f);
+    public Vector3 posLevel3 = new Vector3(-3.75f,2.28f,-3.6f);
 
 
     public GameObject currentPosition;
 
-
+        
     public void ChangeToLevel()
     {
-        
+  
         Vector3 actualLevel = currentPosition.transform.position;
         Debug.Log(actualLevel);
         Debug.Log(posLevel1);

@@ -35,11 +35,25 @@ public class movimientoJugador : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 300f));
+            Debug.Log("La posicion del jugador es "+gameObject.transform.position.y);
+            if (gameObject.transform.position.y>= -2.9f && gameObject.transform.position.y <= -1f)
+            {
+                Debug.Log("entro en jump");
+                gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 400f));
+
+                anim.SetBool("isJumping", true);
+            }
+            else
+            {
+                anim.SetBool("isJumping", false);
+
+            }
         }
         else
         {
             anim.SetBool("isMoving", false);
+            anim.SetBool("isJumping", false);
+
 
         }
     }

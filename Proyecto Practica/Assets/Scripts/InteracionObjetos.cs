@@ -21,7 +21,6 @@ public class InteracionObjetos : MonoBehaviour
     private GameObject grabbedObject=null;
     private AccionesObjetos accionesObjetos= null;
 
-
     void Start()
     {
         texto.text = "Objeto = [Vacio]";
@@ -34,10 +33,7 @@ public class InteracionObjetos : MonoBehaviour
         {
             if (accionesObjetos.isGrabbable(this.currentObject.tag))
             {
-                this.hasObject = true;
-                this.currentObject.SetActive(false);
-                this.grabbedObject = this.currentObject;
-                Debug.Log("The grabbed object is -> " + this.currentObject.tag);
+                grabObject();
             }
             else
             {
@@ -46,41 +42,64 @@ public class InteracionObjetos : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Z) && this.hasObject && this.grabbedObject)
         {
-            this.grabbedObject = null;
-            this.currentObject.SetActive(true);
-            this.currentObject = null;
-            this.hasObject = false;
-            texto.text = "Objeto = [Vacio]";
+            dropObject();
         }
+        if (Input.GetKey(KeyCode.X) && this.hasObject && this.grabbedObject)
+        {
 
+            useObject();
 
+        }
+    }
+
+    void grabObject()
+    {
+        this.hasObject = true;
+        this.currentObject.SetActive(false);
+        this.grabbedObject = this.currentObject;
+        Debug.Log("The grabbed object is -> " + this.currentObject.tag);
+    }
+
+    void dropObject()
+    {
+        Debug.Log(this.grabbedObject.tag);
+        this.currentObject = this.grabbedObject;
+        this.currentObject.SetActive(true);
+        this.grabbedObject = null;
+        this.hasObject = false;
+        texto.text = "Objeto = [Vacio]";
+    }
+
+    void useObject()
+    {
+        RaycastHit2D useObject = Physics2D.Raycast(player.transform.position, player.transform.right);
+        if (useObject)
+        {
+            GameObject obstacle = useObject.transform.GetComponent<GameObject>();
+            if (obstacle != null)
+            {
+                Debug.DrawLine(player.transform.position, player.transform.right, Color.red);
+                Debug.Log(obstacle.tag);
+
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
-    {
+    { 
         this.currentObject = col.gameObject;
 
          texto.text = " Objeto = ["+col.tag+"]";
 
         accionesObjetos = new AccionesObjetos(col.tag, this.player, this.currentObject, this.texto);
-
         accionesObjetos.checkTag();
-
-
-
-
-
     }
+
     void OnTriggerExit2D(Collider2D col)
     {
-        if (this.currentObject != null)
-        {
-            this.currentObject = null;
-        }
-       
+            this.currentObject = null;  
             texto.text = "Objeto = [Vacio]";
     }
-   
 
 
 }
