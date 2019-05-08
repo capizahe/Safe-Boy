@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class CambioEscena: MonoBehaviour
 {
-
     public string NombreEscena;
 
     public void on_Click()

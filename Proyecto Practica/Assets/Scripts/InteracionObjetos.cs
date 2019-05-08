@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 /*
@@ -10,7 +12,7 @@ using UnityEngine.UI;
  * a ellos mediante tags
  * 
  */
- 
+
 public class InteracionObjetos : MonoBehaviour
 {
 
@@ -44,15 +46,25 @@ public class InteracionObjetos : MonoBehaviour
         {
             dropObject();
         }
-        if (Input.GetKey(KeyCode.X) && this.hasObject && this.grabbedObject)
+        if (Input.GetKey(KeyCode.X) && this.hasObject && this.grabbedObject  && RayCast("fuego") )
         {
 
-            useObject();
+            useObject("fuego");
+            EscogerNivelPlayer1 escoger = new EscogerNivelPlayer1();
+
+            if (escoger.currentPosition != null)
+            {
+                SceneManager.LoadScene("MapaPrincipalAventura");
+                escoger.ActualPosition(escoger.posLevel2);
+                PlayerPrefs.SetString("ActualLevel", "EscenaNivel2");
+
+
+            }
 
         }
     }
 
-    void grabObject()
+    void  grabObject()
     {
         this.hasObject = true;
         this.currentObject.SetActive(false);
@@ -70,19 +82,10 @@ public class InteracionObjetos : MonoBehaviour
         texto.text = "Objeto = [Vacio]";
     }
 
-    void useObject()
+    void useObject(string objetive)
     {
-        RaycastHit2D useObject = Physics2D.Raycast(player.transform.position, player.transform.right);
-        if (useObject)
-        {
-            GameObject obstacle = useObject.transform.GetComponent<GameObject>();
-            if (obstacle != null)
-            {
-                Debug.DrawLine(player.transform.position, player.transform.right, Color.red);
-                Debug.Log(obstacle.tag);
-
-            }
-        }
+        GameObject objetiveO = GameObject.FindGameObjectWithTag(objetive);
+        objetiveO.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -99,6 +102,17 @@ public class InteracionObjetos : MonoBehaviour
     {
             this.currentObject = null;  
             texto.text = "Objeto = [Vacio]";
+    }
+
+    bool RayCast(string objetive)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.right);
+
+        if (hit.collider != null)
+        {
+            return hit.collider.tag.Equals(objetive);
+        }
+        return false;
     }
 
 

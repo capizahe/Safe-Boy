@@ -19,6 +19,7 @@ public class movimientoJugador : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             anim.SetBool("isMoving", true);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
             gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0.3481652f, -0.37f);
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
 
@@ -27,6 +28,7 @@ public class movimientoJugador : MonoBehaviour
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             anim.SetBool("isMoving", true);
+            transform.rotation = Quaternion.Euler(0, -180, 0);
             gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(-0.3693712f, -0.37f);
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
             moveLeft();
@@ -56,6 +58,8 @@ public class movimientoJugador : MonoBehaviour
 
 
         }
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+
     }
 
     void moveRight()
