@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EscogerNivelPlayer1 : MonoBehaviour
+public class escogerNivelPlayer1 : MonoBehaviour
 {
 
-    public static EscogerNivelPlayer1 escogerNivel;
+    public escogerNivelPlayer1 escogerNivel;
 
-    public  Vector3 posLevel1 = new Vector3(-6.04f, 4.5f, -3.56081f);
+    public  Vector3 posLevel1 = new Vector3(-6.04f, 4.5f, -3.6f);
     public  Vector3 posLevel2 = new Vector3(-4.98f,3.5f, -3.6f);
     public  Vector3 posLevel3 = new Vector3(-3.75f,2.28f,-3.6f);
 
 
-    public static GameObject currentPosition;
+    public  GameObject currentPosition;
 
     private void Start()
     {
@@ -35,7 +35,7 @@ public class EscogerNivelPlayer1 : MonoBehaviour
             else if (actualLevel.x.Equals(posLevel3.x) && actualLevel.y.Equals(posLevel3.y))
             { SceneManager.LoadScene("EscenaNivel3"); Debug.Log("Entro a Escena Nivel 3"); }
     }
-    public static void ActualPosition(Vector3 actualPosition )
+    public void ActualPosition(Vector3 actualPosition )
     {
         currentPosition.transform.position.Set(actualPosition.x,actualPosition.y,actualPosition.z);
 

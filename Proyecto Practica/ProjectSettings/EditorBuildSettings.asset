@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel1/EscenaNivel3.unity
     guid: b7fae16239f177f4fa17371193bc10b1
+  - enabled: 1
+    path: Assets/Scenes/Menus/Preguntados.unity
+    guid: 06c02b7dabc5c884b838cf0887e9e0f2
   m_configObjects: {}

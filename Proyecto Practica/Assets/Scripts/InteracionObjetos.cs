@@ -50,7 +50,7 @@ public class InteracionObjetos : MonoBehaviour
         {
 
             useObject("fuego");
-            EscogerNivelPlayer1 escoger = new EscogerNivelPlayer1();
+            escogerNivelPlayer1 escoger = new escogerNivelPlayer1();
 
             if (escoger.currentPosition != null)
             {
