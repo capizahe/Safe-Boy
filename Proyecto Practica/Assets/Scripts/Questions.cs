@@ -15,6 +15,7 @@ public class Questions : MonoBehaviour
         q[0] = "¿Que color de extintor se debe usar para apagar las llamas en equipos electricos?|a) Rojo| b) Amarillo, c) Verde, d) blanco|d";
         q[1] = "¿Cual es el color de las señales preventiavas?| a) Amarillo| b)Azul| c) Rojo| d)Naranja|a";
 
+
         qa = new bool[q.Length];
     }
 

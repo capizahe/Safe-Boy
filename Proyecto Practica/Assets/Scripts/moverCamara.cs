@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class moverCamara : MonoBehaviour
 {
+
+
+    public Text tx;
     //public Camera mn;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -20,7 +24,9 @@ public class moverCamara : MonoBehaviour
 
     void OnMouseUp()
     {
-        Debug.Log(this.name);
+        //Debug.Log(this.name);
+        
+        
         
 
         Vector3 targetPosition = new Vector3(13.4f, 0, 0);
@@ -33,6 +39,8 @@ public class moverCamara : MonoBehaviour
 
         if (this.name.Equals("terremoto"))
             Camera.main.transform.Translate(0, -10, 0);
+
+
 
 
     }
