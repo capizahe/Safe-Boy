@@ -718,7 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4edd295ca117c45b7529b63d13b855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NombreEscena: MapaPrincipal
+  NombreEscena: MapaPrincipalAventura
 --- !u!1 &1219205434
 GameObject:
   m_ObjectHideFlags: 0

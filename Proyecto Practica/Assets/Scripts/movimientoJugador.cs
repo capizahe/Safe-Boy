@@ -11,7 +11,6 @@ public class movimientoJugador : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -20,6 +19,7 @@ public class movimientoJugador : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             anim.SetBool("isMoving", true);
+            gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0.3481652f, -0.37f);
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
 
             moveRight();
@@ -27,6 +27,7 @@ public class movimientoJugador : MonoBehaviour
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             anim.SetBool("isMoving", true);
+            gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(-0.3693712f, -0.37f);
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
             moveLeft();
         }
@@ -45,12 +46,12 @@ public class movimientoJugador : MonoBehaviour
 
     void moveRight()
     {
-        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(1000f * Time.deltaTime, 0));
+        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(800f * Time.deltaTime, 0));
 
     }
     void moveLeft()
     {
-        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-1000f * Time.deltaTime, 0));
+        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(-800f * Time.deltaTime, 0));
 
     }
     void moveUp()
