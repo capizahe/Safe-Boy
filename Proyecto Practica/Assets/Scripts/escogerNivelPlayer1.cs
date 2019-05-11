@@ -8,15 +8,18 @@ public class escogerNivelPlayer1 : MonoBehaviour
 
     public escogerNivelPlayer1 escogerNivel;
 
-    public  Vector3 posLevel1 = new Vector3(-6.04f, 4.5f, -3.6f);
-    public  Vector3 posLevel2 = new Vector3(-4.98f,3.5f, -3.6f);
-    public  Vector3 posLevel3 = new Vector3(-3.75f,2.28f,-3.6f);
+    public  Vector3 posLevel1;
+    public  Vector3 posLevel2;
+    public  Vector3 posLevel3;
 
 
     public  GameObject currentPosition;
 
     private void Start()
     {
+        posLevel1 = new Vector3(-6.04f, 4.5f, -3.6f);
+        posLevel2 = new Vector3(-4.98f, 3.5f, -3.6f);
+        posLevel3 = new Vector3(-3.75f, 2.28f, -3.6f);
         escogerNivel = this;
     }
 
