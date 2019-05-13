@@ -50,17 +50,8 @@ public class InteracionObjetos : MonoBehaviour
         {
 
             useObject("fuego");
-            escogerNivelPlayer1 escoger = new escogerNivelPlayer1();
 
-            if (escoger.currentPosition != null)
-            {
-                SceneManager.LoadScene("MapaPrincipalAventura");
-                escoger.ActualPosition(escoger.posLevel2);
-                PlayerPrefs.SetString("ActualLevel", "EscenaNivel2");
-
-
-            }
-
+            SceneManager.LoadScene("MapaPrincipalAventura");
         }
     }
 
