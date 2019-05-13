@@ -50,7 +50,6 @@ public class InteracionObjetos : MonoBehaviour
         {
 
             useObject("fuego");
-
             SceneManager.LoadScene("MapaPrincipalAventura");
         }
     }
