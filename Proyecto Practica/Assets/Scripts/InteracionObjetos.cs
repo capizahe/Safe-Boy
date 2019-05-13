@@ -50,13 +50,10 @@ public class InteracionObjetos : MonoBehaviour
         {
 
             useObject("fuego");
-            EscogerNivelPlayer1 escoger = new EscogerNivelPlayer1();
-
-            if (escoger.currentPosition != null)
+            if (EscogerNivelPlayer1.currentPosition != null)
             {
                 SceneManager.LoadScene("MapaPrincipalAventura");
-                escoger.ActualPosition(escoger.posLevel2);
-                PlayerPrefs.SetString("ActualLevel", "EscenaNivel2");
+                                EscogerNivelPlayer1.ActualPosition(EscogerNivelPlayer1.escogerNivel.posLevel2);
 
 
             }
@@ -106,10 +103,11 @@ public class InteracionObjetos : MonoBehaviour
 
     bool RayCast(string objetive)
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.right);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.right,3.0f);
 
-        if (hit.collider != null)
+        if (hit.collider != null) 
         {
+            Debug.Log("Distance: " + (hit.point.x - transform.position.x));
             return hit.collider.tag.Equals(objetive);
         }
         return false;
