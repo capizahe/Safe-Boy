@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Extintor
   - fuego
+  - JugadorAventura
   layers:
   - Default
   - TransparentFX

@@ -19,6 +19,7 @@ public class movimientoJugador : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             anim.SetBool("isMoving", true);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
             gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0.3481652f, -0.37f);
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
 
@@ -27,6 +28,7 @@ public class movimientoJugador : MonoBehaviour
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
             anim.SetBool("isMoving", true);
+            transform.rotation = Quaternion.Euler(0, -180, 0);
             gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(-0.3693712f, -0.37f);
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
             moveLeft();
@@ -35,13 +37,29 @@ public class movimientoJugador : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 300f));
+            Debug.Log("La posicion del jugador es "+gameObject.transform.position.y);
+            if (gameObject.transform.position.y>= -2.9f && gameObject.transform.position.y <= -1f)
+            {
+                Debug.Log("entro en jump");
+                gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 400f));
+
+                anim.SetBool("isJumping", true);
+            }
+            else
+            {
+                anim.SetBool("isJumping", false);
+
+            }
         }
         else
         {
             anim.SetBool("isMoving", false);
+            anim.SetBool("isJumping", false);
+
 
         }
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+
     }
 
     void moveRight()
