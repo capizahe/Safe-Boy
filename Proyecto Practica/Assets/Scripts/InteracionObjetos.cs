@@ -53,7 +53,7 @@ public class InteracionObjetos : MonoBehaviour
             if (EscogerNivelPlayer1.currentPosition != null)
             {
                 SceneManager.LoadScene("MapaPrincipalAventura");
-                                EscogerNivelPlayer1.ActualPosition(EscogerNivelPlayer1.escogerNivel.posLevel2);
+                EscogerNivelPlayer1.ActualPosition(EscogerNivelPlayer1.escogerNivel.posLevel3);
 
 
             }

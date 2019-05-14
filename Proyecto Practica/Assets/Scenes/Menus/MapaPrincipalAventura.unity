@@ -128,7 +128,7 @@ GameObject:
   m_TagString: JugadorAventura
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!95 &59275813
 Animator:
@@ -537,7 +537,6 @@ MonoBehaviour:
   posLevel1: {x: -6.04, y: 4.5, z: -3.56081}
   posLevel2: {x: -4.98, y: 3.9, z: -3.6}
   posLevel3: {x: -3.75, y: 2.28, z: -3.6}
-  currentPosition: {fileID: 59275812}
 --- !u!1 &219306281
 GameObject:
   m_ObjectHideFlags: 0

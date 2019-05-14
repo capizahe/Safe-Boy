@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class EscogerNivelPlayer1 : MonoBehaviour
 {
 
-    public static EscogerNivelPlayer1 escogerNivel;
+    public static EscogerNivelPlayer1 escogerNivel { get; private set; }
+
 
     public  Vector3 posLevel1 = new Vector3(-6.04f, 4.5f, -3.56081f);
     public  Vector3 posLevel2 = new Vector3(-4.98f,3.5f, -3.6f);
@@ -15,9 +16,17 @@ public class EscogerNivelPlayer1 : MonoBehaviour
 
     public static GameObject currentPosition;
 
-    private void Start()
+    private void Awake()
     {
+        if(escogerNivel == null)
+        {
         escogerNivel = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
 
@@ -37,7 +46,11 @@ public class EscogerNivelPlayer1 : MonoBehaviour
     }
     public static void ActualPosition(Vector3 actualPosition )
     {
-        currentPosition.transform.position.Set(actualPosition.x,actualPosition.y,actualPosition.z);
+        currentPosition = GameObject.FindGameObjectWithTag("JugadorAventura");
+
+        Debug.Log("The last position is " + currentPosition.transform);
+        currentPosition.transform.position = actualPosition;
+        Debug.Log("The new position is " +currentPosition.transform);
 
     }
 
