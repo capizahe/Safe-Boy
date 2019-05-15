@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Preguntados/Q.unity
     guid: fb6afde6f867d2442a4c2b032cb3327c
+  - enabled: 1
+    path: Assets/Scenes/Preguntados/Preguntados.unity
+    guid: 85460d41f8abdd14cafd2a43fe6a7574
   m_configObjects: {}

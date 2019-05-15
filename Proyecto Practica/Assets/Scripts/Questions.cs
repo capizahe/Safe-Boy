@@ -21,6 +21,7 @@ public class Questions : MonoBehaviour
     public Button b2;
     public Button b3;
     public Button b4;
+    public Button back;
 
     public string Preguntados;
 
@@ -35,7 +36,9 @@ public class Questions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
      {
-        
+        back.enabled = false;
+
+
         if (moverCamara.getCat() == 1)
             Camera.main.backgroundColor = Color.yellow;
 
@@ -98,17 +101,16 @@ public class Questions : MonoBehaviour
             b3.enabled = false;
             b4.enabled = false;
             Debug.Log("Incorrecto");
-            //Colorear botones de correcta e incorrecta
-            //Timer para despues devolver
+            
             
         }
 
-      
 
+
+
+
+        back.enabled = true;
         
-        
-        
-        SceneManager.LoadScene("Preguntados");
     }
 
     void clic2()
@@ -136,12 +138,8 @@ public class Questions : MonoBehaviour
             Debug.Log("Incorrecto");
         }
 
-        long start = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-        long end = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 
-        while (end - start < 2000)
-            end = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-        SceneManager.LoadScene("Preguntados");
+        back.enabled = true;
 
     }
 
@@ -170,13 +168,8 @@ public class Questions : MonoBehaviour
             Debug.Log("Incorrecto");
         }
 
-        long start = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-        long end = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 
-        while (end - start < 2000)
-            end = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-
-        SceneManager.LoadScene("Preguntados");
+        back.enabled = true;
     }
 
     void clic4()
@@ -206,13 +199,8 @@ public class Questions : MonoBehaviour
         }
 
 
-        long start = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-        long end = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 
-        while (end - start < 2000)
-            end = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
-
-        SceneManager.LoadScene(Preguntados);
+        back.enabled = true;
     }
 
     // Update is called once per frame
