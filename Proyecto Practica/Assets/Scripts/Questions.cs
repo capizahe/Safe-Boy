@@ -1,7 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
+
 using UnityEngine.UI;
+using System.Threading;
+
+
+using UnityEngine.SceneManagement;
+using System;
 
 public class Questions : MonoBehaviour
 {
@@ -17,6 +22,12 @@ public class Questions : MonoBehaviour
     public Button b3;
     public Button b4;
 
+    public string Preguntados;
+
+    private  ColorBlock grn;
+    private  ColorBlock red;
+
+    
 
     private bool [] qa;
     private string[] q;
@@ -24,6 +35,7 @@ public class Questions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
      {
+        
         if (moverCamara.getCat() == 1)
             Camera.main.backgroundColor = Color.yellow;
 
@@ -53,56 +65,155 @@ public class Questions : MonoBehaviour
         a4.text = "     " + op[5];
 
 
-        b1.onClick.AddListener(clic);
-        b2.onClick.AddListener(clic);
-        b3.onClick.AddListener(clic);
-        b4.onClick.AddListener(clic);
+        b1.onClick.AddListener(clic1);
+        b2.onClick.AddListener(clic2);
+        b3.onClick.AddListener(clic3);
+        b4.onClick.AddListener(clic4);
 
     }
 
 
-    void clic() {
-
+    void clic1() {
 
         string[] R = op[6].Split(')');
-        
 
-        string r1 = a1.text.Substring(5,1);
-        string r2 = a2.text.Substring(5, 1);
-        string r3 = a3.text.Substring(5, 1);
-        string r4 = a4.text.Substring(5, 1);
+        string r = a1.text.Substring(5, 1);
 
-
-        Debug.Log(r1);
-        Debug.Log((R[0]));
-
-        Debug.Log((r2[0]));
-        Debug.Log((r3[0]));
-        Debug.Log((r4[0]));
-
-        Debug.Log(R[0].Equals(r1));
-        Debug.Log(R[0].Equals(r2));
-        Debug.Log(R[0].Equals(r3));
-        Debug.Log(R[0].Equals(r4));
-
-
-
-        if (R[0].Equals(r1))
+        if (R[0].Equals(r))
         {
-            Debug.Log(a1.text);
+            b1.GetComponent<Image>().color = Color.green;
+            b1.enabled = false;
+            b2.enabled = false;
+            b3.enabled = false;
+            b4.enabled = false;
 
+
+            Debug.Log("Correcto");
+        }
+        else
+        {
+            b1.GetComponent<Image>().color = Color.red;
+            b1.enabled = false;
+            b2.enabled = false;
+            b3.enabled = false;
+            b4.enabled = false;
+            Debug.Log("Incorrecto");
+            //Colorear botones de correcta e incorrecta
+            //Timer para despues devolver
+            
         }
 
-        if (R[0].Equals(r2))
-            Debug.Log(a2.text);
+      
 
-        if (R[0].Equals(r3))
-            Debug.Log(a3.text);
-
-        if (R[0].Equals(r4))
-            Debug.Log(a4.text);
+        
+        
+        
+        SceneManager.LoadScene("Preguntados");
     }
 
+    void clic2()
+    {
+        Debug.Log(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds());
+        string[] R = op[6].Split(')');
+
+        string r = a2.text.Substring(5, 1);
+
+        if (R[0].Equals(r))
+        {
+            b2.GetComponent<Image>().color = Color.green;
+            b1.enabled = false;
+            b2.enabled = false;
+            b3.enabled = false;
+            b4.enabled = false;
+            Debug.Log("Correcto");
+        }
+        else {
+            b2.GetComponent<Image>().color = Color.red;
+            b1.enabled = false;
+            b2.enabled = false;
+            b3.enabled = false;
+            b4.enabled = false;
+            Debug.Log("Incorrecto");
+        }
+
+        long start = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+        long end = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+        while (end - start < 2000)
+            end = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+        SceneManager.LoadScene("Preguntados");
+
+    }
+
+    void clic3()
+    {
+        Debug.Log(DateTimeOffset.UtcNow.ToUnixTimeMilliseconds());
+        string[] R = op[6].Split(')');
+
+        string r = a3.text.Substring(5, 1);
+
+        if (R[0].Equals(r))
+        {
+            b3.GetComponent<Image>().color = Color.green;
+            b1.enabled = false;
+            b2.enabled = false;
+            b3.enabled = false;
+            b4.enabled = false;
+            Debug.Log("Correcto");
+        }
+        else {
+            b3.GetComponent<Image>().color = Color.red;
+            b1.enabled = false;
+            b2.enabled = false;
+            b3.enabled = false;
+            b4.enabled = false;
+            Debug.Log("Incorrecto");
+        }
+
+        long start = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+        long end = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+        while (end - start < 2000)
+            end = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+        SceneManager.LoadScene("Preguntados");
+    }
+
+    void clic4()
+    {
+       Debug.Log( DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()); 
+        string[] R = op[6].Split(')');
+
+        string r = a4.text.Substring(5, 1);
+
+        if (R[0].Equals(r))
+        {
+            b4.GetComponent<Image>().color = Color.green;
+            b1.enabled = false;
+            b2.enabled = false;
+            b3.enabled = false;
+            b4.enabled = false;
+            Debug.Log("Correcto");
+        }
+        else {
+            b4.GetComponent<Image>().color = Color.red;
+            
+            b1.enabled = false;
+            b2.enabled = false;
+            b3.enabled = false;
+            b4.enabled = false;
+            Debug.Log("Incorrecto");
+        }
+
+
+        long start = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+        long end = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+        while (end - start < 2000)
+            end = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+
+        SceneManager.LoadScene(Preguntados);
+    }
 
     // Update is called once per frame
     void Update()
