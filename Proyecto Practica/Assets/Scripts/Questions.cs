@@ -49,12 +49,15 @@ public class Questions : MonoBehaviour
             Camera.main.backgroundColor = Color.blue;
 
         
-        q = new string[2];
+        q = new string[6];
       //inicio de preguntas
       //q[i] = "Tipo de pregunta| pregunta|a) |b) |c) |d) |letra de Respuesta correcta "
         q[0] = "1|¿Que color de extintor se debe usar para apagar las llamas en equipos electricos?|a)Rojo|b) Amarillo|c) Verde|d) blanco|d";
-        q[1] = "1|¿Cual es el color de las señales preventiavas?|a) Amarillo|b)Azul|c) Rojo|d)Naranja|a";
-            
+        q[1] = "1|¿Cual es el color de las señales preventiavas?|a) Amarillo|b) Azul|c) Rojo|d) Naranja|a";
+        q[2] = "1|Durante una emergencia, usted debe:|a) Gritar pidiendo ayuda|b Correr buscando alguna autoridad o ente de seguridad|c) No hacer nada|d) Mantener la calma|d)";
+        q[3] = "1|El equipo de emergencia básico debe tener: Radio y linterna de mano de baterias, baterias adicionales, equipo primeros auxilios, agua, alimentos (enlatados , frutos secos, almendras etc..)|a) Falso|b) Solo agua y alimentos|c) Verdadero|d) Todo menos baterías extra|c";
+        q[4] = "1|Antes de un terremoto ten presente: Los lugares seguras de tu residencia y de tu colegio (por ejemplo campos abiertos). Los marcos de las puertas o muebles resistentes son los lugares recomendados para protegerse en estos casos|a) Es verdad|b) ¿De que habla?|c) Tal vez|d) Flaso|a";
+        q[5] = "1|En caso de evacuación asegúrate de llevar contigo:|a) Agua, alimentos no perecederos, ropa, gruesa y elementos primeros auxilios|b) A tu perro, a tu mama, una maleta con tus cosas personales y agua|c) No lleves nada, ya el desastre se te llevó todo, bueno solo agua |d) Agua, ropa, alimentos y tu compu para jugar este juego :v|a";
 
 
         qa = new bool[q.Length];
