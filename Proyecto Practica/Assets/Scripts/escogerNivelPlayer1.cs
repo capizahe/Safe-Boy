@@ -9,16 +9,20 @@ public class EscogerNivelPlayer1 : MonoBehaviour
     public static EscogerNivelPlayer1 escogerNivel { get; private set; }
 
 
-    public  Vector3 posLevel1 = new Vector3(-6.04f, 4.5f, -3.56081f);
-    public  Vector3 posLevel2 = new Vector3(-4.98f,3.5f, -3.6f);
-    public  Vector3 posLevel3 = new Vector3(-3.75f,2.28f,-3.6f);
+    public Vector3 posLevel1;
+    public Vector3 posLevel2;
+    public Vector3 posLevel3;
 
 
     public static GameObject currentPosition;
 
     private void Awake()
     {
-        if(escogerNivel == null)
+        posLevel1 = new Vector3(-7.37f, 4.59f, -3.560819f);
+        posLevel2 = new Vector3(-6.09f, 3.57f, -3.560819f);
+        posLevel3 = new Vector3(-4.56f, 2.33f, -3.560819f);
+
+        if (escogerNivel == null)
         {
         escogerNivel = this;
             DontDestroyOnLoad(gameObject);
@@ -29,15 +33,17 @@ public class EscogerNivelPlayer1 : MonoBehaviour
         }
     }
 
-
+  
     public void ChangeToLevel()
     {
+
         currentPosition = GameObject.FindGameObjectWithTag("JugadorAventura");
-        DontDestroyOnLoad(currentPosition);
         Vector3 actualLevel = currentPosition.transform.position;
-            Debug.Log(actualLevel);
-            Debug.Log(posLevel1);
-            if (actualLevel.x.Equals(posLevel1.x) && actualLevel.y.Equals(posLevel1.y))
+            Debug.Log("Actual level "+ actualLevel);
+            Debug.Log("Actual pos "  + posLevel1);
+        DontDestroyOnLoad(currentPosition);
+
+        if (actualLevel.x.Equals(posLevel1.x) && actualLevel.y.Equals(posLevel1.y))
             { SceneManager.LoadScene("EscenaNivel1"); Debug.Log("Entro a Escena Nivel 1"); }
             else if (actualLevel.x.Equals(posLevel2.x) && actualLevel.y.Equals(posLevel2.y))
             { SceneManager.LoadScene("EscenaNivel2"); Debug.Log("Entro a Escena Nivel 2"); }
