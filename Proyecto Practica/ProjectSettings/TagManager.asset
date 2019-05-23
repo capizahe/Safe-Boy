@@ -7,6 +7,10 @@ TagManager:
   - Extintor
   - fuego
   - JugadorAventura
+  - fuegoL2
+  - habitacion
+  - RegistroGas
+  - cocina
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,8 @@ public class FueraDeLugar : MonoBehaviour
 
     public GameObject player;
     private bool isIn;
+    public GameObject scenary;
+
 
     void Start()
     {
@@ -27,7 +29,8 @@ public class FueraDeLugar : MonoBehaviour
      */
     bool check()
     {
-        this.isIn = (player.transform.position.y < -5 && player.transform.position.x > 8) ? false : true;
+        this.isIn = ((player.transform.position.y < -5 && player.transform.position.x > 8)
+                   ||(player.transform.position.y < -4))  ? false : true;
         return this.isIn;
     }
     /*
@@ -35,7 +38,27 @@ public class FueraDeLugar : MonoBehaviour
      */
     void restartPosition()
     {
-        player.transform.position = new Vector3(4.82f, -2.57f, -3.469688f);
+        switch (this.scenary.tag)
+        {
+            case "cocina":
+                player.transform.position = new Vector3(-4.5f, -1.16f, -3.469688f);
+                break;
+            case "habitacion":
+                player.transform.position = new Vector3(4.82f, -2.57f, -3.469688f);
+                break;
+
+
+        }
+
+        if (this.scenary.tag.Equals("cocina"))
+        {
+
+        }
+        if (this.scenary.tag.Equals("habitacion"))
+        {
+            player.transform.position = new Vector3(4.82f, -2.57f, -3.469688f);
+        }
         this.isIn = true;
+
     }
 }
