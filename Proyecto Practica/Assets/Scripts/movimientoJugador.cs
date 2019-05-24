@@ -8,6 +8,7 @@ public class movimientoJugador : MonoBehaviour
     private Animator anim;
     void Start()
     {
+        gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0.3481652f, -0.37f);
         anim = GetComponent<Animator>();
     }
 

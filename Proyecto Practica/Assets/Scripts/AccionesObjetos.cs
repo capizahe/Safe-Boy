@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AccionesObjetos
@@ -21,14 +22,23 @@ public class AccionesObjetos
 
     public void checkTag()
     {
-        if (this.tag.Equals("fuego")) { restartPosition(); }
+        if (this.tag.Equals("fuego") || this.tag.Equals("fuegoL2")) { restartPosition(this.tag); }
     }
 
     public bool isGrabbable(string tag)
     {
         if (tag != null)
-            return !tag.Equals("fuego");
+            return !tag.Equals("fuego") || !tag.Equals("fuegoL2");
         return true;
+    }
+
+    public bool isJustUsable(string tag)
+    {
+        if(tag!= null)
+        {
+            return tag.Equals("RegistroGas");
+        }
+        return false;
     }
 
     public GameObject isObjective(string tag)
@@ -36,11 +46,21 @@ public class AccionesObjetos
          return (tag!=null)?GameObject.FindGameObjectWithTag(tag):null;
     }
 
-    private void restartPosition()
+    private void restartPosition(string tag)
     {
-        player.transform.position = new Vector3(4.82f, -2.57f, 0f);
-        player.GetComponent<Rigidbody2D>().velocity= new Vector2(0f,0f);
+        switch (tag)
+        {
+            case "fuego":
+                SceneManager.LoadScene("EscenaNivel1"); Debug.Log("Entro a Escena Nivel 1");
+                break;
+            case "fuegoL2":
+                SceneManager.LoadScene("EscenaNivel1"); Debug.Log("Entro a Escena Nivel 1");
+
+                break;
+        }    
+        player.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
         text.text = "Objeto = [Vacio]";
+
     }
  
 
