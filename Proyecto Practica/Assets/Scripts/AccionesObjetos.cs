@@ -54,7 +54,7 @@ public class AccionesObjetos
                 SceneManager.LoadScene("EscenaNivel1"); Debug.Log("Entro a Escena Nivel 1");
                 break;
             case "fuegoL2":
-                SceneManager.LoadScene("EscenaNivel2"); Debug.Log("Entro a Escena Nivel 1");
+                SceneManager.LoadScene("EscenaNivel1"); Debug.Log("Entro a Escena Nivel 1");
 
                 break;
         }    

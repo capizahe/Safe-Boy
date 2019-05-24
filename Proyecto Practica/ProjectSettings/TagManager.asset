@@ -11,6 +11,7 @@ TagManager:
   - habitacion
   - RegistroGas
   - cocina
+  - Sala
   layers:
   - Default
   - TransparentFX

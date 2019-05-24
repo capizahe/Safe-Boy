@@ -38,10 +38,13 @@ public class InteracionObjetos : MonoBehaviour
      void Update()
     {
         //Nivel 1 escena 2
+        if (this.scenary.tag.Equals("cocina"))
+        {
         anim.SetBool("UsaRegistro", false);
+        }
 
         if (Input.GetKey(KeyCode.Space) && this.currentObject && !this.hasObject && !this.grabbedObject 
-                                       && !accionesObjetos.isJustUsable(this.currentObject.tag))
+                                        && !accionesObjetos.isJustUsable(this.currentObject.tag))
         {
             if (accionesObjetos.isGrabbable(this.currentObject.tag))
             {
@@ -67,8 +70,18 @@ public class InteracionObjetos : MonoBehaviour
                 {
                     useObject("fuegoL2");
                     SceneManager.LoadScene("MapaPrincipalAventura");
-                    EscogerNivelPlayer1.ActualPosition(EscogerNivelPlayer1.escogerNivel.posLevel3);
+                    EscogerNivelPlayer1.escogerNivel.ActualPosition(EscogerNivelPlayer1.escogerNivel.posLevel3);
                 }
+            }
+
+            if (this.scenary.tag.Equals("Sala"))
+            {
+                //Si el registro esta cerrado
+                    useObject("fuego");
+                    SceneManager.LoadScene("MapaPrincipalAventura");
+                    EscogerNivelPlayer1.escogerNivel.ActualPosition(EscogerNivelPlayer1.escogerNivel.posFinal);
+                    Object.Destroy(EscogerNivelPlayer1.escogerNivel);
+               
             }
 
             //Nivel 1 escena 1
@@ -76,10 +89,10 @@ public class InteracionObjetos : MonoBehaviour
             if (this.scenary.tag.Equals("habitacion"))
             {
                 useObject("fuego");
-                if (EscogerNivelPlayer1.currentPosition != null)
+                if (EscogerNivelPlayer1.escogerNivel.currentPosition != null)
                 { 
                     SceneManager.LoadScene("MapaPrincipalAventura");
-                    EscogerNivelPlayer1.ActualPosition(EscogerNivelPlayer1.escogerNivel.posLevel2);
+                    EscogerNivelPlayer1.escogerNivel.ActualPosition(EscogerNivelPlayer1.escogerNivel.posLevel2);
                 }
             }
 
