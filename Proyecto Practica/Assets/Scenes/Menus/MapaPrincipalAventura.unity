@@ -534,8 +534,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df5f86fde2f77db4293a169f886d6fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posLevel1: {x: -6.04, y: 4.5, z: -3.56081}
-  posLevel2: {x: -4.98, y: 3.9, z: -3.6}
+  escogerNivel: {fileID: 0}
+  posLevel1: {x: -6.04, y: 4.5, z: -3.6}
+  posLevel2: {x: -4.98, y: 3.5, z: -3.6}
   posLevel3: {x: -3.75, y: 2.28, z: -3.6}
 --- !u!1 &219306281
 GameObject:

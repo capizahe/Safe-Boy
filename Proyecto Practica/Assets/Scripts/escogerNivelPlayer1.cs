@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EscogerNivelPlayer1 : MonoBehaviour
+public class escogerNivelPlayer1 : MonoBehaviour
 {
 
     public static EscogerNivelPlayer1 escogerNivel { get; private set; }
@@ -14,7 +14,7 @@ public class EscogerNivelPlayer1 : MonoBehaviour
     public Vector3 posLevel3;
 
 
-    public static GameObject currentPosition;
+    public  GameObject currentPosition;
 
     private void Awake()
     {
@@ -50,7 +50,7 @@ public class EscogerNivelPlayer1 : MonoBehaviour
             else if (actualLevel.x.Equals(posLevel3.x) && actualLevel.y.Equals(posLevel3.y))
             { SceneManager.LoadScene("EscenaNivel3"); Debug.Log("Entro a Escena Nivel 3"); }
     }
-    public static void ActualPosition(Vector3 actualPosition )
+    public void ActualPosition(Vector3 actualPosition )
     {
         currentPosition = GameObject.FindGameObjectWithTag("JugadorAventura");
 
