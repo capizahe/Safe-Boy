@@ -222,7 +222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NombreEscena: Q
-  categoria: 0
 --- !u!1 &617613388
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,7 +336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NombreEscena: Q
-  categoria: 0
 --- !u!212 &728095634
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -753,7 +751,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NombreEscena: Q
-  categoria: 0
 --- !u!1 &2104427440
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,7 +811,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 24
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -916,7 +913,7 @@ RectTransform:
   m_GameObject: {fileID: 2120035969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.69353515, y: 0.9241386, z: 1}
+  m_LocalScale: {x: 0.92760324, y: 0.9241386, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

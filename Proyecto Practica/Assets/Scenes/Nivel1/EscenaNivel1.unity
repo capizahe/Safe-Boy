@@ -327,7 +327,6 @@ GameObject:
   - component: {fileID: 421574844}
   - component: {fileID: 421574843}
   - component: {fileID: 421574850}
-  - component: {fileID: 421574851}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Untagged
@@ -348,6 +347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 421574842}
+  scenary: {fileID: 1754395127}
 --- !u!114 &421574844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,18 +504,8 @@ MonoBehaviour:
   texto: {fileID: 1303009121}
   player: {fileID: 421574842}
   currentObject: {fileID: 0}
---- !u!114 &421574851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 421574842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e1bbef125c46704889d781ad2d7dc82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  scenary: {fileID: 1754395127}
+  anim: {fileID: 421574848}
 --- !u!1 &486979621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,7 +1121,7 @@ GameObject:
   - component: {fileID: 1754395128}
   m_Layer: 0
   m_Name: Habitacion
-  m_TagString: Untagged
+  m_TagString: habitacion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
