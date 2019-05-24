@@ -54,10 +54,10 @@ public class Questions : MonoBehaviour
       //q[i] = "Tipo de pregunta| pregunta|a) |b) |c) |d) |letra de Respuesta correcta "
         q[0] = "1|¿Que color de extintor se debe usar para apagar las llamas en equipos electricos?|a)Rojo|b) Amarillo|c) Verde|d) blanco|d";
         q[1] = "1|¿Cual es el color de las señales preventiavas?|a) Amarillo|b) Azul|c) Rojo|d) Naranja|a";
-        q[2] = "1|Durante una emergencia, usted debe:|a) Gritar pidiendo ayuda|b Correr buscando alguna autoridad o ente de seguridad|c) No hacer nada|d) Mantener la calma|d)";
-        q[3] = "1|El equipo de emergencia básico debe tener: Radio y linterna de mano de baterias, baterias adicionales, equipo primeros auxilios, agua, alimentos (enlatados , frutos secos, almendras etc..)|a) Falso|b) Solo agua y alimentos|c) Verdadero|d) Todo menos baterías extra|c";
-        q[4] = "1|Antes de un terremoto ten presente: Los lugares seguras de tu residencia y de tu colegio (por ejemplo campos abiertos). Los marcos de las puertas o muebles resistentes son los lugares recomendados para protegerse en estos casos|a) Es verdad|b) ¿De que habla?|c) Tal vez|d) Flaso|a";
-        q[5] = "1|En caso de evacuación asegúrate de llevar contigo:|a) Agua, alimentos no perecederos, ropa, gruesa y elementos primeros auxilios|b) A tu perro, a tu mama, una maleta con tus cosas personales y agua|c) No lleves nada, ya el desastre se te llevó todo, bueno solo agua |d) Agua, ropa, alimentos y tu compu para jugar este juego :v|a";
+        q[2] = "2|Durante una emergencia, usted debe:|a) Gritar ¡Ayuda!|b) Correr y gritar|c) No hacer nada|d) Mantener la calma|d)";
+        q[3] = "3|El equipo de emergencia debe tener: Radio y linterna, baterias adicionales, primeros auxilios, agua, alimentos|a) Falso|b) Solo agua |c) Verdadero|d) Todo menos baterías|c";
+        q[4] = "2|Antes de un terremoto ten presente: Los lugares seguras de tu residencia y de tu colegio (Campos abiertos)|a) Es verdad|b) ¿De que habla?|c) Tal vez|d) Flaso|a";
+        q[5] = "3|En caso de evacuación asegúrate de llevar contigo:|a)Equipo/Emergnecia|b) A tu perro|c) No lleves nada |d) Este juego :v|a";
 
 
         qa = new bool[q.Length];
