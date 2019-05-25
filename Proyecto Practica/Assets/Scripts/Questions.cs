@@ -49,13 +49,19 @@ public class Questions : MonoBehaviour
             Camera.main.backgroundColor = Color.blue;
 
         
-        q = new string[2];
+        q = new string[10];
       //inicio de preguntas
       //q[i] = "Tipo de pregunta| pregunta|a) |b) |c) |d) |letra de Respuesta correcta "
         q[0] = "1|¿Que color de extintor se debe usar para apagar las llamas en equipos electricos?|a)Rojo|b) Amarillo|c) Verde|d) blanco|d";
-        q[1] = "1|¿Cual es el color de las señales preventiavas?|a) Amarillo|b)Azul|c) Rojo|d)Naranja|a";
-            
-
+        q[1] = "1|¿Cual es el color de las señales preventiavas?|a) Amarillo|b) Azul|c) Rojo|d) Naranja|a";
+        q[2] = "2|Durante una emergencia, usted debe:|a) Gritar ¡Ayuda!|b) Correr y gritar|c) No hacer nada|d) Mantener la calma|d)";
+        q[3] = "3|El equipo de emergencia debe tener: Radio y linterna, baterias adicionales, primeros auxilios, agua, alimentos|a) Falso|b) Solo agua |c) Verdadero|d) Todo menos baterías|c";
+        q[4] = "2|Antes de un terremoto ten presente: Los lugares seguras de tu residencia y de tu colegio (Campos abiertos)|a) Es verdad|b) ¿De que habla?|c) Tal vez|d) Flaso|a";
+        q[5] = "3|En caso de evacuación asegúrate de llevar contigo:|a)Equipo/Emergnecia|b) A tu perro|c) No lleves nada |d) Este juego :v|a";
+        q[6] = "3|Los alimentos en el equipo de emergencia son: |a)Empanadas|b)Agua|c)b y d|d)Enlatados|c";
+        q[7] = "2|Si estas en la calle y sucede un terremoto ¿Debe alejarse de?|a)Personas|b)Postes/cables|Calzada|d)Vehículos|b";
+        q[8] = "2|La forma correcta de salir de un edificio en llamas es:|a)Ventanas|b)Corriendo|c)Rutas de salida|d)Gritar|c";
+        q[9] = "2|Agua, alimentos no perecederos, ropa, gruesa y elementos primeros auxilios. Esto es esencian tenerlo en:|a) El carro|b) El trabajo|c)Terremotos d)Evacuaciónes|d";
 
         qa = new bool[q.Length];
 
